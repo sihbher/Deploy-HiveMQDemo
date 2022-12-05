@@ -10,8 +10,8 @@ jobs:
         run: echo '::set-output name=action_echo::enabled'
       - uses: actions/checkout@v1
       - name: Deployment
-        run: ./deploy-resources.sh
-        shell: bash
+        run: ./deploy-resources.ps1
+        shell: pwsh
         env:
           AzureClientID: ${{ secrets.AZURE_CLIENT_ID }}
           AzureClientPassword: ${{ secrets.AZURE_CLIENT_SECRET }}
