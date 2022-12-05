@@ -1,4 +1,4 @@
-
+echo "Test 1"
 
 #################### + Read env variables + ###########################
 azureAppId = $Env:AzureClientID

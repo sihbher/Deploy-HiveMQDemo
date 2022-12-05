@@ -1,4 +1,4 @@
-name: Deploy Full High Available Architecture
+name: Deploy Full Test Architecture
 on: [workflow_dispatch]
 
 jobs:
