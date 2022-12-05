@@ -1,7 +1,8 @@
 echo "Test 1"
 
+
 #################### + Read env variables + ###########################
-azureAppId = $Env:AzureClientID
+azureAppId = $AzureClientID
 azureAppPassword = $Env:AzureClientPassword
 tenantId = $Env:AzureTenantID
 subscriptionId=$Env:AzureSubscriptionID
