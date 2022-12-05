@@ -1,0 +1,19 @@
+name: Deploy Full High Available Architecture
+on: [workflow_dispatch]
+
+jobs:
+  build:
+    name: Run Script
+    runs-on: ubuntu-latest
+    steps:
+      - name: toggle workflow command echoing
+        run: echo '::set-output name=action_echo::enabled'
+      - uses: actions/checkout@v1
+      - name: Deployment
+        run: ./deploy-resources.sh
+        shell: bash
+        env:
+          AzureClientID: ${{ secrets.AZURE_CLIENT_ID }}
+          AzureClientPassword: ${{ secrets.AZURE_CLIENT_SECRET }}
+          AzureSubscriptionID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+          AzureTenantID: ${{ secrets.AZURE_TENANT_ID }}
